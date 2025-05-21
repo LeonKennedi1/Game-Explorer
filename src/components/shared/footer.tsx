@@ -1,3 +1,4 @@
+//src/components/shared/footer.tsx
 import Link from "next/link";
 import { Gamepad2, ExternalLink } from "lucide-react";
 
