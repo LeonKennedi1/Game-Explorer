@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 //src/app/layout.tsx
-=======
 // src/app/layout.tsx
->>>>>>> 0cf8de2 (feat: create developers page and details)
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
