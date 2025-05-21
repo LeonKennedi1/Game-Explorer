@@ -2,7 +2,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getGames } from "@/services/apiService";
-import { Game, PaginatedResponse } from "./@types/types";
+import { Game, PaginatedResponse } from "../@types/types";
 import GameCard from "@/components/shared/GameCard";
 export default function HomePage() {
   const [games, setGames] = useState<Game[]>([]);

@@ -12,7 +12,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { Game } from "@/app/@types/types";
+import { Game } from "@/@types/types";
 
 interface GameCardProps {
   game: Game;

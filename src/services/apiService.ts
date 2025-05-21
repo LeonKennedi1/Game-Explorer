@@ -8,7 +8,7 @@ import {
   GenreInfo,
   TagInfo,
   DeveloperDetails,
-} from "@/app/@types/types";
+} from "@/@types/types";
 import axios, { AxiosInstance, AxiosError } from "axios";
 
 const API_KEY_FROM_ENV = process.env.NEXT_PUBLIC_RAWG_API_KEY;
