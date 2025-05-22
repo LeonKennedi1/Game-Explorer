@@ -1,4 +1,4 @@
-// app/faq/page.tsx (или pages/faq.tsx)
+// app/faq/page.tsx
 import { HelpCircle, ChevronDown } from "lucide-react";
 import Link from "next/link";
 export const metadata = {

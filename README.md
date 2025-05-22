@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Game Explorer
 
-## Getting Started
+Game Explorer — это веб-приложение, созданное для удобного поиска, просмотра и исследования информации о видеоиграх. Пользователи могут находить игры, фильтровать их по различным критериям (жанры, платформы, разработчики, издатели) и получать подробную информацию о каждой игре.
 
-First, run the development server:
+## Основные функции
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Каталог игр:** Отображение списка игр с основной информацией, такой как обложка, название, дата выхода, рейтинг и доступные платформы (например, PC, PlayStation, Xbox).
+- **Детальная информация об игре:** (Предполагается) При клике на игру открывается страница с более подробной информацией: описание, скриншоты/видео, системные требования, полные списки жанров, разработчиков, издателей и т.д.
+- **Фильтрация и навигация:**
+  - Переход к разделам: "Home", "Games", "Developers", "Genres", "Platforms", "Publishers" через навигационную панель.
+  - (Предполагается) Возможность фильтрации игр на соответствующих страницах по выбранным критериям.
+- **Информационная страница "О нас":** Сведения о проекте, его миссии и команде. (Как было создано в предыдущем запросе).
+- **Визуальное представление:** Современный темный интерфейс, ориентированный на удобство пользователя.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Используемые технологии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:**
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+  - React Icons
+  - Zustand,Axios
+- **API:**
+  - RAWG API
+    https://rawg.io/apidocs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Инструкция по запуску
 
-## Learn More
+Для запуска проекта локально выполните следующие шаги:
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Клонируйте репозиторий:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/LeonKennedi1/Game-Explorer
+    cd game-explorer # или название вашей папки
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Установите зависимости:**
+    Убедитесь, что у вас установлен Node.js и npm/yarn.
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    # или
+    yarn install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Настройка переменных окружения (если требуется):**
+    Если ваш проект использует API-ключи или другие конфигурационные данные, создайте файл `.env.local` в корневой директории проекта и добавьте необходимые переменные. Например:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```env
+    NEXT_PUBLIC_GAME_API_KEY=ВАШ_API_КЛЮЧ_К_ИГРОВОМУ_API
+    NEXT_PUBLIC_GAME_API_URL=https://api.example.com/data
+    ```
+
+    _Примечание: Названия переменных и их необходимость зависят от вашей реализации._
+
+4.  **Запустите сервер для разработки:**
+
+    ```bash
+    npm run dev
+    # или
+    yarn dev
+    ```
+
+5.  **Откройте приложение в браузере:**
+    Перейдите по адресу [http://localhost:3000] (или другому порту, если он настроен иначе).
+
+## Использование инструментов искусственного интеллекта (ИИ)
+
+В процессе разработки данного проекта могли использоваться или использовались следующие инструменты ИИ:
+
+- **Инструмент ИИ:** [deepseek] ,Встроенный в Visual studio code [GitHub Copilot].
+- **Задачи, для которых применялся ИИ:**
+  - Помощь в написании и отладке кода на Next.js, TypeScript, Tailwind CSS.
+  - Генерация примеров текстового контента для страниц (например, "about").
+  - Предложение идей для пользовательского интерфейса и функционала.
+  - Объяснение концепций веб-разработки и поиск решений для возникающих проблем.
+
+## Разработчики
+
+- LeonKennedi1 https://github.com/LeonKennedi1
