@@ -9,6 +9,7 @@ import {
   TagInfo,
   DeveloperDetails,
   StoreDetails,
+  GamesApiResponse,
 } from "@/@types/types";
 import axios, { AxiosInstance, AxiosError } from "axios";
 
@@ -291,3 +292,28 @@ export const getStoreDetails = async (
   }
 };
 export default apiClient;
+export async function getGamesByStore(
+  storeId: number | string,
+  page: number = 1,
+  pageSize: number = 20
+): Promise<GamesApiResponse> {
+  try {
+    const response = await fetch(
+      `${API_BASE_URL}/games?key=${API_KEY_FROM_ENV}&stores=${storeId}&page=${page}&page_size=${pageSize}`
+    );
+    if (!response.ok) {
+      console.error(
+        `Failed to fetch games for store ${storeId}:`,
+        response.status,
+        await response.text()
+      );
+      throw new Error(
+        `Failed to fetch games for store. Status: ${response.status}`
+      );
+    }
+    return (await response.json()) as GamesApiResponse;
+  } catch (error) {
+    console.error(`Error in getGamesByStore for storeId ${storeId}:`, error);
+    return { count: 0, next: null, previous: null, results: [] };
+  }
+}

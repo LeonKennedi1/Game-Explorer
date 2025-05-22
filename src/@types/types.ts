@@ -112,3 +112,9 @@ export interface StoreDetails extends StoreInfo {
   games_count: number;
   image_background: string | null;
 }
+export interface GamesApiResponse {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Game[];
+}
