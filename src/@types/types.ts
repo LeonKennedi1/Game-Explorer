@@ -101,3 +101,14 @@ export interface Movie {
     max: string;
   };
 }
+export interface StoreInfo {
+  id: number;
+  name: string;
+  slug: string;
+  domain?: string;
+}
+
+export interface StoreDetails extends StoreInfo {
+  games_count: number;
+  image_background: string | null;
+}

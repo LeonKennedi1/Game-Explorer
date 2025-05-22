@@ -8,6 +8,7 @@ import {
   GenreInfo,
   TagInfo,
   DeveloperDetails,
+  StoreDetails,
 } from "@/@types/types";
 import axios, { AxiosInstance, AxiosError } from "axios";
 
@@ -258,5 +259,35 @@ export const getPublisherDetails = async (
     throw error;
   }
 };
-
+export const getAllStores = async (
+  params: Record<string, any> = {}
+): Promise<PaginatedResponse<StoreDetails>> => {
+  try {
+    const response = await apiClient.get<PaginatedResponse<StoreDetails>>(
+      "/stores",
+      { params }
+    );
+    return response.data;
+  } catch (error: any) {
+    console.error(
+      "[apiService] getAllStores - Catch block error:",
+      error.detail || error.message || error
+    );
+    throw error;
+  }
+};
+export const getStoreDetails = async (
+  id: string | number
+): Promise<StoreDetails> => {
+  try {
+    const response = await apiClient.get<StoreDetails>(`/stores/${id}`);
+    return response.data;
+  } catch (error: any) {
+    console.error(
+      `[apiService] getStoreDetails (id: ${id}) - Catch block error:`,
+      error.detail || error.message || error
+    );
+    throw error;
+  }
+};
 export default apiClient;

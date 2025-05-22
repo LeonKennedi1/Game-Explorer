@@ -92,6 +92,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/stores" className={linkStyles}>
+                  Store
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://rawg.io/"
                   target="_blank"
